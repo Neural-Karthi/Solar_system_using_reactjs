@@ -1,0 +1,93 @@
+.sun,.earth,.bordermoon,.borderearth,.moon{
+  position: absolute; 
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto;
+}
+.sun{
+  width: 8vw;
+  height: 8vw;
+  top:18vw;
+  border-radius:50%;
+  background: rgb(253,184,19);
+  background: linear-gradient(121deg, rgba(253,184,19,1) 35%, rgba(240,142,56,1) 100%); 
+  box-shadow: 0 0 3em white;
+  border-color: white transparent transparent transparent;
+}
+.earth{
+  top:20vw;
+  background: rgb(17,50,156);
+  background: linear-gradient(79deg, rgba(17,50,156,1) 35%, rgba(85,171,212,1) 100%); 
+  width: 4vw;
+  height: 4vw;
+  border-radius:50%;
+  animation: spinAround infinite 26.5s linear;
+  border-color: white transparent transparent transparent;
+}
+.earthborder{
+    width: 20vw;
+    height: 20vw;
+    border: 10px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    animation: spinAround infinite 26.5s linear;
+}
+.moon{
+  top:1.2vw;
+  background: rgb(17,50,156);
+  background: linear-gradient(79deg, rgb(226, 226, 226) 35%, rgb(182, 182, 182) 100%); 
+  width: 2vw;
+  height: 2vw;
+  border-radius:50%;
+  animation: moonspin infinite 9s linear;
+  border-color: white transparent transparent transparent;
+}
+.borderearth{
+  border:.3vw solid aqua;
+  margin-top: 8vw;
+  width: 26vw;
+  height: 26vw;
+  border-radius:50%;
+  border-bottom: transparent;
+  border-right: transparent;
+  border-left: transparent;
+  animation: 26s linear infinite spinner;
+}
+.bordermoon{
+  border:.1vw solid rgb(128, 128, 128);
+  margin-top: -1.9vw;
+  margin-right: -1.9vw;
+  width: 8vw;
+  height: 8vw;
+  border-radius:50%;
+  border-bottom: transparent;
+  border-right: transparent;
+  border-left: transparent;
+  animation: 9s linear infinite spinner;
+}
+@keyframes spinner {
+  from {
+    transform: rotate(0deg)  ;
+  }
+  to {
+    transform: rotate(360deg)  ;
+  }
+}
+@keyframes spinAround {
+    from {
+      transform: rotate(0deg) translate(13vw) ;
+    }
+    to {
+      transform: rotate(360deg) translate(13vw) ;
+    }
+}
+@keyframes moonspin {
+  from {
+    transform: rotate(0deg) translate(4vw) ;
+  }
+  to {
+    transform: rotate(360deg) translate(4vw) ;
+  }
+}
